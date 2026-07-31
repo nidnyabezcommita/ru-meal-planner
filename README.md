@@ -1,6 +1,8 @@
 # 🥗 Arpa Meal Planner
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-4ba51d.svg)](CODE_OF_CONDUCT.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.0-61DAFB.svg)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-6.2-646CFF.svg)](https://vitejs.dev/)
@@ -119,6 +121,17 @@ Arpa is a comprehensive, full-stack meal planning application designed to stream
 - **Backend:** Node.js, Express, tsx
 - **Database:** SQLite (Better-SQLite3)
 - **AI Integration:** Google Gemini, Ollama, and MLX support
+
+---
+
+## 🤝 Community & Contributing
+
+We welcome contributions! Please refer to the following guidelines:
+
+- [Contributing Guidelines](CONTRIBUTING.md) - How to report bugs, request features, and submit pull requests.
+- [Code of Conduct](CODE_OF_CONDUCT.md) - Standards for participating in our community.
+- [Security Policy](SECURITY.md) - Instructions for reporting security vulnerabilities.
+- [License](LICENSE) - Project license (MIT).
 
 ---
 

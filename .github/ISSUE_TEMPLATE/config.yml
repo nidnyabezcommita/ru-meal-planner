@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security Vulnerability Reporting
+    url: https://github.com/aselekoglu/arpa-meal-planner/blob/main/SECURITY.md
+    about: Report security vulnerabilities confidentially according to our security policy.
