@@ -1,4 +1,4 @@
-# 🥗 Arpa Meal Planner
+# 🥗 Russian Arpa Meal Planner / Русифицированная версия планировщика меню
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-4ba51d.svg)](CODE_OF_CONDUCT.md)
@@ -11,36 +11,6 @@
 **Plan meals faster, shop smarter, and waste less food.**
 
 Arpa is a comprehensive, full-stack meal planning application designed to streamline your kitchen workflow. It combines recipe management, weekly planning, pantry tracking, and AI-powered intelligence into one cohesive experience.
-
-## 🖼️ App Screenshots
-
-### Dashboard
-| Light | Dark |
-|---|---|
-| ![Arpa Dashboard Light](public/screenshots/dashboard-light.png) | ![Arpa Dashboard Dark](public/screenshots/dashboard-dark.png) |
-
-### Planner
-| Light | Dark |
-|---|---|
-| ![Arpa Planner Light](public/screenshots/planner-light.png) | ![Arpa Planner Dark](public/screenshots/planner-dark.png) |
-
-### Grocery List
-| Light | Dark |
-|---|---|
-| ![Arpa Grocery Light](public/screenshots/grocery-light.png) | ![Arpa Grocery Dark](public/screenshots/grocery-dark.png) |
-
-### Pantry
-| Light | Dark |
-|---|---|
-| ![Arpa Pantry Light](public/screenshots/pantry-light.png) | ![Arpa Pantry Dark](public/screenshots/pantry-dark.png) |
-
-### Additional Views
-- ![Arpa Meal Edit](public/screenshots/meal-edit-light.png)
-- ![Arpa Import Recipe](public/screenshots/import-recipe-dark.png)
-- ![Arpa Job Queue](public/screenshots/job-queue-dark.png)
-- ![Arpa Settings](public/screenshots/settings-dark.png)
-
----
 
 ## ✨ Features
 
@@ -120,7 +90,7 @@ Arpa is a comprehensive, full-stack meal planning application designed to stream
 - **Frontend:** React 19, TypeScript, Vite, Tailwind CSS 4, Framer Motion
 - **Backend:** Node.js, Express, tsx
 - **Database:** SQLite (Better-SQLite3)
-- **AI Integration:** Google Gemini, Ollama, and MLX support
+- **AI Integration:** YandexGPT, Ollama, and MLX support
 
 ---
 
@@ -137,10 +107,9 @@ We welcome contributions! Please refer to the following guidelines:
 
 ## 🗺️ Roadmap
 
-- [ ] **Cloud Sync:** Migration to Firebase Auth + Firestore for cross-device synchronization.
-- [ ] **Advanced Nutrition:** Integration with external nutrition databases for higher accuracy.
-- [ ] **Community Sharing:** Ability to share recipes and meal plans with other Arpa users.
-- [ ] **Mobile App:** Dedicated mobile experience for on-the-go grocery shopping.
+- [ ] **Localization:** .
+
+- [ ] **YandexGPT Integration:** 
 
 ---
 
@@ -149,5 +118,3 @@ We welcome contributions! Please refer to the following guidelines:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-*Built with ❤️ by [aselekoglu](https://github.com/aselekoglu)*
