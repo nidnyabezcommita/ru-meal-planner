@@ -27,6 +27,8 @@ import {
 import { loadDefaultServings } from '../lib/preferences';
 import { aiJobModelLabel, useAiJobQueue } from '../context/AiJobQueueContext';
 import { applyNutritionEstimatesToIngredients } from '../lib/ai-job-apply';
+import { useTranslation } from 'react-i18next';
+import '@/i18n/i18n';
 
 interface AddMealModalProps {
   isOpen: boolean;
@@ -48,6 +50,7 @@ export default function AddMealModal({
   scrollToIngredientsOnOpen = false,
   onScrollToIngredientsConsumed,
 }: AddMealModalProps) {
+  const { t } = useTranslation();
   const { runWithAiJob } = useAiJobQueue();
   const [name, setName] = useState('');
   const [tag, setTag] = useState('');
@@ -468,10 +471,11 @@ export default function AddMealModal({
         <div className="px-6 py-5 flex justify-between items-center sticky top-0 bg-surface z-10 border-b border-outline-variant/15">
           <div>
             <h2 className="text-xl font-display font-extrabold text-primary-container dark:text-primary-fixed-dim tracking-tight">
-              {editingMeal && editingMeal.id ? 'Edit Recipe' : 'Add New Recipe'}
+              {editingMeal && editingMeal.id ? t('addmealmodal.title.edit') : t('addmealmodal.title.add')}
             </h2>
             <p className="text-xs text-on-surface-variant mt-0.5">
-              Capture every detail of your dish.
+              {t('addmealmodal.subtitle')}
+              
             </p>
           </div>
           <button
@@ -486,30 +490,30 @@ export default function AddMealModal({
           <div className="space-y-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className={fieldLabel}>Meal Name *</label>
+                <label className={fieldLabel}>{t('addmealmodal.fields.name')}</label>
                 <input
                   type="text"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="e.g. Bebu Koftesi"
+                  placeholder={t('addmealmodal.placeholders.name')}
                   className={inputClass}
                 />
               </div>
               <div>
-                <label className={fieldLabel}>Tag</label>
+                <label className={fieldLabel}>{t('addmealmodal.fields.tag')}</label>
                 <input
                   type="text"
                   value={tag}
                   onChange={(e) => setTag(e.target.value)}
-                  placeholder="e.g. Mediterranean, Breakfast"
+                  placeholder={t('addmealmodal.placeholders.tag')}
                   className={inputClass}
                 />
               </div>
             </div>
 
             <div className="max-w-xs">
-              <label className={fieldLabel}>Default Servings *</label>
+              <label className={fieldLabel}>{t('addmealmodal.fields.servings')}</label>
               <input
                 type="number"
                 min="1"
@@ -523,7 +527,7 @@ export default function AddMealModal({
             </div>
 
             <div>
-              <label className={fieldLabel}>Source URL</label>
+              <label className={fieldLabel}>{t('addmealmodal.fields.url')}</label>
               <input
                 type="url"
                 value={sourceUrl}
@@ -534,7 +538,7 @@ export default function AddMealModal({
             </div>
 
             <div>
-              <label className={fieldLabel}>Meal Image</label>
+              <label className={fieldLabel}>{t('addmealmodal.fields.img')}</label>
               <div className="space-y-3">
                 {imageUrl ? (
                   <div className="relative aspect-video rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container-low">
@@ -582,7 +586,7 @@ export default function AddMealModal({
                     ) : (
                       <>
                         <ImageIcon className="w-10 h-10 mb-2 opacity-30" />
-                        <p className="text-sm">No image selected</p>
+                        <p className="text-sm">{t('addmealmodal.texts.noImage')}</p>
                       </>
                     )}
                   </div>
@@ -592,7 +596,7 @@ export default function AddMealModal({
                   <div className="grid grid-cols-3 gap-2">
                     <label className="flex flex-col items-center justify-center p-3 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl hover:bg-surface-container-low dark:hover:bg-surface-container-highest cursor-pointer transition-colors">
                       <Upload className="w-5 h-5 mb-1 text-primary-container dark:text-primary-fixed-dim" />
-                      <span className="text-xs font-display font-semibold">Upload</span>
+                      <span className="text-xs font-display font-semibold">{t('addmealmodal.buttons.upload')}</span>
                       <input
                         type="file"
                         accept="image/*"
@@ -606,12 +610,12 @@ export default function AddMealModal({
                       className="flex flex-col items-center justify-center p-3 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors"
                     >
                       <Camera className="w-5 h-5 mb-1 text-primary-container dark:text-primary-fixed-dim" />
-                      <span className="text-xs font-display font-semibold">Camera</span>
+                      <span className="text-xs font-display font-semibold">{t('addmealmodal.buttons.camera')}</span>
                     </button>
                     <div className="relative group">
                       <div className="flex flex-col items-center justify-center p-3 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors">
                         <LinkIcon className="w-5 h-5 mb-1 text-primary-container dark:text-primary-fixed-dim" />
-                        <span className="text-xs font-display font-semibold">URL</span>
+                        <span className="text-xs font-display font-semibold">{t('addmealmodal.buttons.url')}</span>
                       </div>
                       <input
                         type="url"
@@ -640,7 +644,7 @@ export default function AddMealModal({
 
             <div>
               <div className="flex justify-between items-center mb-3">
-                <label className={fieldLabel + ' mb-0'}>Instructions</label>
+                <label className={fieldLabel + ' mb-0'}>{t('addmealmodal.fields.instructions')}</label>
                 <div className="flex items-center gap-3">
                   <button
                     type="button"
@@ -653,14 +657,14 @@ export default function AddMealModal({
                     ) : (
                       <Sparkles className="w-3.5 h-3.5" />
                     )}
-                    Fetch Instructions
+                    {t('addmealmodal.links.fetchInstructions')}
                   </button>
                   <button
                     type="button"
                     onClick={() => setInstructions([...instructions, ''])}
                     className="text-xs font-display font-bold text-primary-container dark:text-primary-fixed-dim hover:underline inline-flex items-center gap-1"
                   >
-                    <Plus className="w-3.5 h-3.5" /> Add Step
+                    <Plus className="w-3.5 h-3.5" /> {t('addmealmodal.links.addStep')}
                   </button>
                 </div>
               </div>
@@ -697,7 +701,7 @@ export default function AddMealModal({
                 ))}
                 {instructions.length === 0 && (
                   <div className="text-sm text-on-surface-variant italic text-center py-5 bg-surface-container-low dark:bg-surface-container-high/50 rounded-2xl border border-dashed border-outline-variant/40">
-                    No instructions added yet. Click "Add Step" to begin.
+                    {t('addmealmodal.texts.noInstructions')}
                   </div>
                 )}
               </div>
@@ -705,7 +709,7 @@ export default function AddMealModal({
 
             <div ref={ingredientsSectionRef}>
               <div className="flex justify-between items-center mb-3">
-                <label className={fieldLabel + ' mb-0'}>Ingredients</label>
+                <label className={fieldLabel + ' mb-0'}>{t('addmealmodal.fields.ingredients')}</label>
                 <div className="flex items-center gap-3">
                   <button
                     type="button"
@@ -718,14 +722,14 @@ export default function AddMealModal({
                     ) : (
                       <Sparkles className="w-3.5 h-3.5" />
                     )}
-                    Estimate Nutrition
+                    {t('addmealmodal.links.estimate')}
                   </button>
                   <button
                     type="button"
                     onClick={handleAddIngredient}
                     className="text-xs font-display font-bold text-primary-container dark:text-primary-fixed-dim hover:underline inline-flex items-center gap-1"
                   >
-                    <Plus className="w-3.5 h-3.5" /> Add Ingredient
+                    <Plus className="w-3.5 h-3.5" /> {t('addmealmodal.links.addIngredient')}
                   </button>
                 </div>
               </div>
@@ -741,7 +745,7 @@ export default function AddMealModal({
                     <div className="flex flex-wrap gap-2 items-start">
                       <input
                         type="text"
-                        placeholder="Ingredient name"
+                        placeholder={t('addmealmodal.placeholders.ingredient')}
                         value={ing.name || ''}
                         onChange={(e) => handleIngredientChange(index, 'name', e.target.value)}
                         className={`${inputClass} flex-1 min-w-[160px]`}
@@ -756,7 +760,7 @@ export default function AddMealModal({
                         type="number"
                         min="0"
                         step="0.01"
-                        placeholder="Amount"
+                        placeholder={t('addmealmodal.placeholders.amount')}
                         value={ing.amount || ''}
                         onChange={(e) =>
                           handleIngredientChange(index, 'amount', parseFloat(e.target.value))
@@ -784,26 +788,26 @@ export default function AddMealModal({
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                       <NutrientInput
-                        placeholder="Calories"
-                        label="Calories"
+                        placeholder={t('addmealmodal.placeholders.calories')}
+                        label={t('addmealmodal.fields.calories')}
                         value={ing.calories}
                         onChange={(v) => handleIngredientChange(index, 'calories', v)}
                       />
                       <NutrientInput
-                        placeholder="Protein (g)"
-                        label="Protein"
+                        placeholder={t('addmealmodal.placeholders.protein')}
+                        label={t('addmealmodal.fields.protein')}
                         value={ing.protein}
                         onChange={(v) => handleIngredientChange(index, 'protein', v)}
                       />
                       <NutrientInput
-                        placeholder="Fat (g)"
-                        label="Fat"
+                        placeholder={t('addmealmodal.placeholders.fat')}
+                        label={t('addmealmodal.fields.fat')}
                         value={ing.fat}
                         onChange={(v) => handleIngredientChange(index, 'fat', v)}
                       />
                       <NutrientInput
-                        placeholder="Carbs (g)"
-                        label="Carbs"
+                        placeholder={t('addmealmodal.placeholders.carbs')}
+                        label={t('addmealmodal.fields.carbs')}
                         value={ing.carbs}
                         onChange={(v) => handleIngredientChange(index, 'carbs', v)}
                       />
@@ -821,7 +825,7 @@ export default function AddMealModal({
             onClick={onClose}
             className="px-5 py-2.5 text-on-surface-variant font-display font-semibold text-sm rounded-full hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors"
           >
-            Cancel
+            {t('addmealmodal.buttons.cancel')}
           </button>
           <button
             onClick={handleSubmit}
@@ -829,7 +833,7 @@ export default function AddMealModal({
             className="px-5 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-display font-semibold text-sm rounded-full hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2 shadow-sm"
           >
             <Save className="w-4 h-4" />
-            {editingMeal && editingMeal.id ? 'Save Changes' : 'Add Meal'}
+            {editingMeal && editingMeal.id ? t('addmealmodal.buttons.save') : t('addmealmodal.buttons.add')}
           </button>
         </div>
       </div>

@@ -1,0 +1,51 @@
+{
+  "addmealmodal": {
+        "title": {
+            "edit": "Edit Recipe",
+            "add": "Add New Recipe"
+        },
+        "subtitle": "Capture every detail of your dish.",
+        "fields": {
+            "name": "Meal Name *",
+            "tag": "Tag",
+            "servings": "Default Servings *",
+            "url": "Source URL",
+            "image": "Meal Image",
+            "language": "Response language",
+            "instructions": "Instructions",
+            "ingredients": "Ingredients",
+            "calories": "Calories",
+            "protein": "Protein",
+            "fat": "Fat",
+            "carbs": "Carbs"
+        },
+        "placeholders": {
+            "name": "e.g. Bebu Koftesi",
+            "tag": "e.g. Mediterranean, Breakfast",
+            "ingredient": "Ingredient",
+            "calories": "Calories",
+            "protein": "Protein (g)",
+            "fat": "Fat (g)",
+            "carbs": "Carbs (g)",
+            "amount": "Amount"
+        },
+        "links": {
+            "addStep": "Add Step",
+            "fetchInstructions": "Fetch Instructions",
+            "estimate": "Estimate Nutrition",
+            "addIngredient": "Add Ingredient"
+        },
+        "texts": {
+            "noImage": "No image selected",
+            "noInstructions": "No instructions added yet. Click \"Add Step\" to begin."
+        },
+        "buttons": {
+            "upload": "Upload",
+            "camera": "Camera",
+            "url": "URL",
+            "add": "Add Meal",
+            "cancel": "Cancel",
+            "save": "Save Changes"
+        }
+  }
+}
