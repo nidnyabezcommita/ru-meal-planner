@@ -41,7 +41,7 @@
         "notifications": "Notifications"
     }
   },
-  "addmealmodal": {
+  "addMealModal": {
         "title": {
             "edit": "Edit Recipe",
             "add": "Add New Recipe"
@@ -140,6 +140,78 @@
     "buttons": {
        "cancel": "Cancel",
        "save": "Save & Sync"
+    }
+  },
+  "dashboard": {
+    "pageTitle": "Welcome back, Gourmet.",
+    "pageSubtitle": "Nutrition and meals for {{from}} - {{to}}.",
+    "buttons": {
+        "currentWeek": "Current Week",
+        "nextWeek": "Next Week",
+        "previousWeek": "Previous Week",
+        "importRecipe": "Import Recipe",
+        "addMeal": "Add Meal"
+    },
+    "widgets": {
+        "calories": {
+            "title": "Calories",
+            "subtitle": "kcal/daily"
+        },
+        "protein": {
+            "title": "Protein",
+            "units": "g"
+        },
+        "carbs": {
+            "title": "Carbs",
+            "units": "g"
+        },
+        "fat": {
+            "title": "Fat",
+            "units": "g"
+        }
+    },
+    "weeklyOverview": {
+        "title": "Weekly Overview",
+        "links": {
+            "viewCalendar": "View Calendar",
+            "recipeDetails": "Recipe Details"
+        },
+        "today": "Today",
+        "count": "{{ingredients}} ingredients / {{servings}} servings",
+        "empty": "Add meals to your planner to see your weekly overview here."
+    },
+    "grocery": {
+        "title": "Grocery List",
+        "empty": "No grocery items needed for this week.",
+        "links": {
+            "open": "Open grocery list"
+        }
+    },
+    "pantry": {
+        "title": "Pantry Stock Alerts",
+        "empty": "Pantry levels look healthy.",
+        "alert": {
+            "title": "Low on {{name}}",
+            "amount": "Only {{amount}} {{measure}} remaining"
+        }
+    },
+    "promo": {
+        "title": "Master the Art of Meal Prep.",
+        "text": "Our AI analyzes your pantry and cravings to generate a bespoke weekly menu that reduces waste and elevates your kitchen.",
+        "button": "Optimize My Weekly Plan"
+    },
+    "recipes": {
+      "title": "Recipe Library",
+      "meal": "meal",
+      "meals": "meals",
+      "search": {
+        "placeholder": "Search recipes, ingredients..."
+      },
+      "all": "All",
+      "empty": {
+        "title": "No meals found",
+        "subtitle": "Try adjusting your search or add a new meal."
+      }
     }
   }
 }

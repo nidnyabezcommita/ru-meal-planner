@@ -41,7 +41,7 @@ export interface TranslationTypes {
         notifications: string,
     }
   },
-  addmealmodal: {
+  addMealModal: {
         title: {
             edit: string,
             add: string
@@ -138,5 +138,77 @@ export interface TranslationTypes {
        cancel: string,
        save: string
     }
-  }
+  },
+  dashboard: {
+    pageTitle: string,
+    pageSubtitle: string,
+    buttons: {
+        currentWeek: string,
+        nextWeek: string,
+        previousWeek: string,
+        importRecipe: string,
+        addMeal: string,
+    },
+    widgets: {
+        calories: {
+            title: string,
+            subtitle: string,
+        },
+        protein: {
+            title: string,
+            units: string,
+        },
+        carbs: {
+            title: string,
+            units: string,
+        },
+        fat: {
+            title: string,
+            units: string,
+        }
+    },
+    weeklyOverview: {
+        title: string,
+        links: {
+            viewCalendar: string,
+            recipeDetails: string,
+        },
+        today: string,
+        count: string,
+        empty: string,
+    },
+    grocery: {
+        title: string,
+        empty: string,
+        links: {
+            open: string,
+        }
+    },
+    pantry: {
+        title: string,
+        empty: string,
+        alert: {
+            title: string,
+            amount: string,
+        }
+    },
+    promo: {
+        title: string,
+        text: string,
+        button: string,
+    },
+    recipes: {
+      title: string,
+      meal: string,
+      meals: string,
+      search: {
+        placeholder: string,
+      },
+      all: string,
+      empty: {
+        title: string,
+        subtitle: string,
+      }
+    }
+  } 
 }
