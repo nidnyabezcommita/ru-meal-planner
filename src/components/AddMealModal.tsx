@@ -490,30 +490,30 @@ export default function AddMealModal({
           <div className="space-y-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className={fieldLabel}>{t('addmealmodal.fields.name')}</label>
+                <label className={fieldLabel}>{t('addmealmodal.fields.name.label')}</label>
                 <input
                   type="text"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder={t('addmealmodal.placeholders.name')}
+                  placeholder={t('addmealmodal.fields.name.placeholder')}
                   className={inputClass}
                 />
               </div>
               <div>
-                <label className={fieldLabel}>{t('addmealmodal.fields.tag')}</label>
+                <label className={fieldLabel}>{t('addmealmodal.fields.tag.label')}</label>
                 <input
                   type="text"
                   value={tag}
                   onChange={(e) => setTag(e.target.value)}
-                  placeholder={t('addmealmodal.placeholders.tag')}
+                  placeholder={t('addmealmodal.fields.tag.placeholder')}
                   className={inputClass}
                 />
               </div>
             </div>
 
             <div className="max-w-xs">
-              <label className={fieldLabel}>{t('addmealmodal.fields.servings')}</label>
+              <label className={fieldLabel}>{t('addmealmodal.fields.servings.label')}</label>
               <input
                 type="number"
                 min="1"
@@ -527,18 +527,18 @@ export default function AddMealModal({
             </div>
 
             <div>
-              <label className={fieldLabel}>{t('addmealmodal.fields.url')}</label>
+              <label className={fieldLabel}>{t('addmealmodal.fields.url.label')}</label>
               <input
                 type="url"
                 value={sourceUrl}
                 onChange={(e) => setSourceUrl(e.target.value)}
-                placeholder="https://..."
+                placeholder={t('addmealmodal.fields.url.placeholder')}
                 className={inputClass}
               />
             </div>
 
             <div>
-              <label className={fieldLabel}>{t('addmealmodal.fields.img')}</label>
+              <label className={fieldLabel}>{t('addmealmodal.fields.img.label')}</label>
               <div className="space-y-3">
                 {imageUrl ? (
                   <div className="relative aspect-video rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container-low">
@@ -644,7 +644,7 @@ export default function AddMealModal({
 
             <div>
               <div className="flex justify-between items-center mb-3">
-                <label className={fieldLabel + ' mb-0'}>{t('addmealmodal.fields.instructions')}</label>
+                <label className={fieldLabel + ' mb-0'}>{t('addmealmodal.fields.instructions.label')}</label>
                 <div className="flex items-center gap-3">
                   <button
                     type="button"
@@ -684,7 +684,7 @@ export default function AddMealModal({
                         newInst[index] = e.target.value;
                         setInstructions(newInst);
                       }}
-                      placeholder={`Step ${index + 1}`}
+                      placeholder={t('addmealmodal.fields.step.placeholder') + ` ${index + 1}`}
                       rows={2}
                       className={`${inputClass} resize-y`}
                     />
@@ -709,7 +709,7 @@ export default function AddMealModal({
 
             <div ref={ingredientsSectionRef}>
               <div className="flex justify-between items-center mb-3">
-                <label className={fieldLabel + ' mb-0'}>{t('addmealmodal.fields.ingredients')}</label>
+                <label className={fieldLabel + ' mb-0'}>{t('addmealmodal.fields.ingredients.label')}</label>
                 <div className="flex items-center gap-3">
                   <button
                     type="button"
@@ -745,7 +745,7 @@ export default function AddMealModal({
                     <div className="flex flex-wrap gap-2 items-start">
                       <input
                         type="text"
-                        placeholder={t('addmealmodal.placeholders.ingredient')}
+                        placeholder={t('addmealmodal.fields.ingredient.placeholder')}
                         value={ing.name || ''}
                         onChange={(e) => handleIngredientChange(index, 'name', e.target.value)}
                         className={`${inputClass} flex-1 min-w-[160px]`}
@@ -760,7 +760,7 @@ export default function AddMealModal({
                         type="number"
                         min="0"
                         step="0.01"
-                        placeholder={t('addmealmodal.placeholders.amount')}
+                        placeholder={t('addmealmodal.fields.amount.placeholder')}
                         value={ing.amount || ''}
                         onChange={(e) =>
                           handleIngredientChange(index, 'amount', parseFloat(e.target.value))
@@ -789,25 +789,25 @@ export default function AddMealModal({
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                       <NutrientInput
                         placeholder={t('addmealmodal.placeholders.calories')}
-                        label={t('addmealmodal.fields.calories')}
+                        label={t('addmealmodal.fields.calories.label')}
                         value={ing.calories}
                         onChange={(v) => handleIngredientChange(index, 'calories', v)}
                       />
                       <NutrientInput
                         placeholder={t('addmealmodal.placeholders.protein')}
-                        label={t('addmealmodal.fields.protein')}
+                        label={t('addmealmodal.fields.protein.label')}
                         value={ing.protein}
                         onChange={(v) => handleIngredientChange(index, 'protein', v)}
                       />
                       <NutrientInput
                         placeholder={t('addmealmodal.placeholders.fat')}
-                        label={t('addmealmodal.fields.fat')}
+                        label={t('addmealmodal.fields.fat.label')}
                         value={ing.fat}
                         onChange={(v) => handleIngredientChange(index, 'fat', v)}
                       />
                       <NutrientInput
                         placeholder={t('addmealmodal.placeholders.carbs')}
-                        label={t('addmealmodal.fields.carbs')}
+                        label={t('addmealmodal.fields.carbs.label')}
                         value={ing.carbs}
                         onChange={(v) => handleIngredientChange(index, 'carbs', v)}
                       />

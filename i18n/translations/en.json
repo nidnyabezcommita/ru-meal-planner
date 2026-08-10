@@ -1,4 +1,46 @@
 {
+  "app": {
+    "logo": {
+        "title": "ARPA",
+        "subtitle": "Meal Planner"
+    },
+    "nav": {
+        "dashboard": "Dashboard",
+        "planner": "Planner",
+        "grocery": "Grocery List",
+        "pantry": "Pantry",
+        "familySync": "Family Sync",
+        "chef": {
+            "title": "Chef",
+            "subtitle": "Profile & settings"
+        }
+    },
+    "mobileNav": {
+        "home": "Home",
+        "planner": "Planner",
+        "grocery": "Grocery",
+        "pantry": "Pantry",
+        "settings": "Settings"
+    },
+    "pageTitle": {
+        "dashboard": "Dashboard",
+        "planner": "Weekly Planner",
+        "grocery": "Grocery List",
+        "pantry": "Pantry Inventory",
+        "preferences": "Preferences",
+        "appName": "ARPA: Meal Planner"
+    },
+    "placeholders": {
+        "search": "Search recipes, ingredients..."
+    },
+    "buttons": {
+        "theme": {
+            "light": "Switch to light theme",
+            "dark": "Switch to dark theme"
+        },
+        "notifications": "Notifications"
+    }
+  },
   "addmealmodal": {
         "title": {
             "edit": "Edit Recipe",
@@ -6,28 +48,66 @@
         },
         "subtitle": "Capture every detail of your dish.",
         "fields": {
-            "name": "Meal Name *",
-            "tag": "Tag",
-            "servings": "Default Servings *",
-            "url": "Source URL",
-            "image": "Meal Image",
-            "language": "Response language",
-            "instructions": "Instructions",
-            "ingredients": "Ingredients",
-            "calories": "Calories",
-            "protein": "Protein",
-            "fat": "Fat",
-            "carbs": "Carbs"
-        },
-        "placeholders": {
-            "name": "e.g. Bebu Koftesi",
-            "tag": "e.g. Mediterranean, Breakfast",
-            "ingredient": "Ingredient",
-            "calories": "Calories",
-            "protein": "Protein (g)",
-            "fat": "Fat (g)",
-            "carbs": "Carbs (g)",
-            "amount": "Amount"
+            "name": {
+                "label": "Meal Name *",
+                "placeholder": "e.g. Bebu Koftesi"
+            },
+            "tag": {
+                "label": "Tag",
+                "placeholder": "e.g. Mediterranean, Breakfast"
+            },
+            "servings": {
+                "label": "Default Servings *",
+                "placeholder": ""
+            },
+            "url": {
+                "label": "Source URL",
+                "placeholder": "https://..."
+            },
+            "img": {
+                "label": "Meal Image",
+                "placeholder": ""
+            },
+            "language": {
+                "label": "Response language",
+                "placeholder": ""
+            },
+            "instructions": {
+                "label": "Instructions",
+                "placeholder": ""
+            },
+            "step": {
+                "label": "",
+                "placeholder": "Step"
+            },
+            "ingredients": {
+                "label": "Ingredients",
+                "placeholder": ""
+            },
+            "ingredient": {
+                "label": "",
+                "placeholder": "Ingredient"
+            },
+            "amount": {
+                "label": "",
+                "placeholder": "Amount"
+            },
+            "calories": {
+                "label": "Calories",
+                "placeholder": "Calories"
+            },
+            "protein": {
+                "label": "Protein",
+                "placeholder": "Protein (g)"
+            },
+            "fat": {
+                "label": "Fat",
+                "placeholder": "Fat (g)"
+            },
+            "carbs": {
+                "label": "Carbs",
+                "placeholder": "Carbs (g)"
+            }
         },
         "links": {
             "addStep": "Add Step",
@@ -47,5 +127,19 @@
             "cancel": "Cancel",
             "save": "Save Changes"
         }
+  },
+  "familySyncModal": {
+    "title": "Family Sync",
+    "text": "Enter a shared family code to sync meals, planner, and grocery lists across devices. Leave blank for personal use.",
+    "fields": {
+        "code": {
+            "label": "Family Code",
+            "placeholder": "e.g. smith-family-2024"
+        }
+    },
+    "buttons": {
+       "cancel": "Cancel",
+       "save": "Save & Sync"
+    }
   }
 }

@@ -1,4 +1,46 @@
 export interface TranslationTypes {
+  app: {
+    logo: {
+        title: string,
+        subtitle: string,
+    },
+    nav: {
+        dashboard: string,
+        planner: string,
+        grocery: string,
+        pantry: string,
+        familySync: string,
+        chef: {
+            title: string,
+            subtitle: string,
+        }
+    },
+    mobileNav: {
+        home: string,
+        planner: string,
+        grocery: string,
+        pantry: string
+        settings: string,
+    },
+    pageTitle: {
+        dashboard: string,
+        planner: string,
+        grocery: string,
+        pantry: string
+        preferences: string,
+        appName: string,
+    },
+    placeholders: {
+        search: string,
+    },
+    buttons: {
+        theme: {
+            light: string,
+            dark: string,
+        },
+        notifications: string,
+    }
+  },
   addmealmodal: {
         title: {
             edit: string,
@@ -6,28 +48,66 @@ export interface TranslationTypes {
         },
         subtitle: string,
         fields: {
-            name: string,
-            tag: string,
-            servings: string,
-            url: string,
-            image: string,
-            language: string,
-            instructions: string,
-            ingredients: string,
-            calories: string,
-            protein: string,
-            fat: string,
-            carbs: string
-        },
-        placeholders: {
-            name: string,
-            tag: string,
-            ingredient: string,
-            calories: string,
-            protein: string,
-            fat: string,
-            carbs: string,
-            amount: string
+            name: {
+                label: string,
+                placeholder: string,
+            },
+            tag: {
+                label: string,
+                placeholder: string,
+            },
+            servings: {
+                label: string,
+                placeholder: string,
+            },
+            url: {
+                label: string,
+                placeholder: string,
+            },
+            image: {
+                label: string,
+                placeholder: string,
+            },
+            language: {
+                label: string,
+                placeholder: string,
+            },
+            instructions: {
+                label: string,
+                placeholder: string,
+            },
+            step: {
+                label: string,
+                placeholder: string,
+            },
+            ingredients: {
+                label: string,
+                placeholder: string,
+            },
+            ingredient: {
+                label: string,
+                placeholder: string,
+            },
+            amount: {
+                label: string,
+                placeholder: string,
+            },
+            calories: {
+                label: string,
+                placeholder: string,
+            },
+            protein: {
+                label: string,
+                placeholder: string,
+            },
+            fat: {
+                label: string,
+                placeholder: string,
+            },
+            carbs: {
+                label: string,
+                placeholder: string,
+            },
         },
         links: {
             addStep: string,
@@ -47,5 +127,16 @@ export interface TranslationTypes {
             cancel: string,
             save: string
         }
+  },
+  familySyncModal: {
+    title: string,
+    text: string,
+    fields: {
+        code: string,
+    },
+    buttons: {
+       cancel: string,
+       save: string
+    }
   }
 }

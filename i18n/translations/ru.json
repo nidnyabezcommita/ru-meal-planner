@@ -1,9 +1,45 @@
 {
-  "page": {
-    "hello": "Привет, {{name}}!",
-    "changeLanguage": "Переключить язык на английский",
-    "dashboardTitle": "Личный кабинет",
-    "profile": "Мой профиль"
+  "app": {
+    "logo": {
+        "title": "ARPA",
+        "subtitle": "Планировние меню"
+    },
+    "nav": {
+        "dashboard": "Главная",
+        "planner": "Планировщик",
+        "grocery": "Список покупок",
+        "pantry": "Хранение",
+        "familySync": "Поделиться",
+        "chef": {
+            "title": "Шеф",
+            "subtitle": "Профиль & настройки"
+        }
+    },
+    "mobileNav": {
+        "home": "Главная",
+        "planner": "Планировщик",
+        "grocery": "Покупки",
+        "pantry": "Хранение",
+        "settings": "Настройки"
+    },
+    "pageTitle": {
+        "dashboard": "Главная",
+        "planner": "Планировщик",
+        "grocery": "Список покупок",
+        "pantry": "Хранение",
+        "preferences": "Настройки",
+        "appName": "ARPA: Планирование меню"
+    },
+    "placeholders": {
+        "search": "Найти рецепт, ингредиенты..."
+    },
+    "buttons": {
+        "theme": {
+            "light": "Переключить на светлую тему",
+            "dark": "Переключить на темную тему"
+        },
+        "notifications": "Уведомления"
+    }
   },
   "addmealmodal": {
         "title": {
@@ -12,28 +48,66 @@
         },
         "subtitle": "В каждой детали — ваш вкус",
         "fields": {
-            "name": "Название *",
-            "tag": "Тег",
-            "servings": "Количество порций",
-            "url": "URL источника",
-            "img": "Изображение",
-            "language": "Язык рецепта",
-            "instructions": "Порядок приготовления",
-            "ingredients": "Ингредиенты",
-            "calories": "Калорийность",
-            "protein": "Белки",
-            "fat": "Жиры",
-            "carbs": "Углеводы"
-        },
-        "placeholders": {
-            "name": "",
-            "tag": "например, завтрак",
-            "ingredient": "Ингредиент",
-            "calories": "Калорийность",
-            "protein": "Белки (гр)",
-            "fat": "Жиры (гр)",
-            "carbs": "Углеводы (гр)",
-            "amount": "Количество"
+            "name": {
+                "label": "Название *",
+                "placeholder": ""
+            },
+            "tag": {
+                "label": "Тег",
+                "placeholder": "например, завтрак"
+            },
+            "servings": {
+                "label": "Количество порций",
+                "placeholder": ""
+            },
+            "url": {
+                "label": "URL источника",
+                "placeholder": "https://..."
+            },
+            "img": {
+                "label": "Изображение",
+                "placeholder": ""
+            },
+            "language": {
+                "label": "Язык рецепта",
+                "placeholder": ""
+            },
+            "instructions": {
+                "label": "Порядок приготовления",
+                "placeholder": ""
+            },
+            "step": {
+                "label": "",
+                "placeholder": "Шаг"
+            },
+            "ingredients": {
+                "label": "Ингредиенты",
+                "placeholder": ""
+            },
+            "ingredient": {
+                "label": "",
+                "placeholder": "Ингредиент"
+            },
+            "amount": {
+                "label": "",
+                "placeholder": "Количество"
+            },
+            "calories": {
+                "label": "Калорийность",
+                "placeholder": "Калорийность"
+            },
+            "protein": {
+                "label": "Белки",
+                "placeholder": "Белки (гр)"
+            },
+            "fat": {
+                "label": "Жиры",
+                "placeholder": "Жиры (гр)"
+            },
+            "carbs": {
+                "label": "Углеводы",
+                "placeholder": "Углеводы (гр)"
+            }
         },
         "links": {
             "addStep": "Добавить шаг",
@@ -53,5 +127,19 @@
             "cancel": "Отмена",
             "save": "Сохранить"
         }
+  },
+  "familySyncModal": {
+    "title": "Поделиться c семьёй",
+    "text": "Введите общий семейный код для синхронизации меню, планировщика и списков покупок на разных устройствах. Оставьте поле пустым для личного использования",
+    "fields": {
+        "code": {
+            "label": "Семейный код",
+            "placeholder": "например, Ивановы-2026"
+        }
+    },
+    "buttons": {
+       "cancel": "Отмена",
+       "save": "Сохранить"
+    }
   }
 }
