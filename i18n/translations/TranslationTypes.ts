@@ -211,4 +211,28 @@ export interface TranslationTypes {
       }
     }
   } 
+  planner: {
+    title: string,
+    subtitle: string,
+    buttons: {
+        nextWeek: string,
+        previousWeek: string,
+        generatePlan: string,
+        remove: string,
+        decrease: string,
+        increase: string,
+        add: string,
+    },
+    today: string,
+    select: string,
+    discovery: {
+        title: string,
+        subtitle: string,
+        search: {
+            placeholder: string,
+        },
+        empty: string,
+        all: string,
+    }
+  }
 }

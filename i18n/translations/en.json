@@ -213,5 +213,29 @@
         "subtitle": "Try adjusting your search or add a new meal."
       }
     }
+  },
+  "planner": {
+    "title": "Weekly Planner",
+    "subtitle": "Drag recipes from the discovery panel onto your week.",
+    "buttons": {
+        "nextWeek": "Next week",
+        "previousWeek": "Previous week",
+        "generatePlan": "Generate Plan",
+        "remove": "Remove from planner",
+        "decrease": "Decrease servings",
+        "increase": "Increase servings",
+        "add": "Quick Add"
+    },
+    "today": "Today",
+    "select": "Select a meal…",
+    "discovery": {
+        "title": "Recipe Discovery",
+        "subtitle": "Drag recipes onto your calendar",
+        "search": {
+            "placeholder": "Find inspiration…"
+        },
+        "empty": "No recipes match your search. Try clearing filters.",
+        "all": "All"
+    }
   }
 }
