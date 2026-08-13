@@ -167,7 +167,7 @@ export default function Planner() {
             <button
               onClick={() => setSelectedDate(addDays(selectedDate, -7))}
               className="p-2 rounded-full hover:bg-surface-container-lowest transition-colors active:scale-90"
-              aria-label={t("planner.buttons.previousWeek")}
+              aria-label={t("app.buttons.previousWeek")}
             >
               <ChevronLeft className="w-4 h-4 text-on-surface-variant" />
             </button>
@@ -177,7 +177,7 @@ export default function Planner() {
             <button
               onClick={() => setSelectedDate(addDays(selectedDate, 7))}
               className="p-2 rounded-full hover:bg-surface-container-lowest transition-colors active:scale-90"
-              aria-label={t("planner.buttons.nextWeek")}
+              aria-label={t("app.buttons.nextWeek")}
             >
               <ChevronRight className="w-4 h-4 text-on-surface-variant" />
             </button>

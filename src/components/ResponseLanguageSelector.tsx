@@ -23,7 +23,7 @@ export default function ResponseLanguageSelector({
   return (
     <div className="space-y-3">
       <label className="block text-[11px] font-display font-bold uppercase tracking-widest text-outline">
-        {t('addmealmodal.fields.language.label')}
+        {t('addMealModal.fields.language.label')}
       </label>
       <select
         value={value}

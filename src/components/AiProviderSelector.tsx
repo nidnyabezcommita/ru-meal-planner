@@ -1,4 +1,6 @@
 import { AiProviderId } from '../lib/ai-settings';
+import { useTranslation } from 'react-i18next';
+import '@/i18n/i18n';
 
 interface AiProviderSelectorProps {
   provider: AiProviderId;
@@ -15,10 +17,12 @@ export default function AiProviderSelector({
   onModelChange,
   disableImageProviders = false,
 }: AiProviderSelectorProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="space-y-3">
       <label className="block text-[11px] font-display font-bold uppercase tracking-widest text-outline">
-        AI Provider
+        {t("grocery.smartGroupPopup.fields.AiProvider.title")}
       </label>
       <div className="grid grid-cols-3 gap-2">
         <ProviderButton
@@ -41,7 +45,7 @@ export default function AiProviderSelector({
       </div>
       <div>
         <label className="block text-[10px] font-display font-bold uppercase tracking-widest text-outline mb-2">
-          Model (optional)
+          {t("grocery.smartGroupPopup.fields.model.title")}
         </label>
         <input
           type="text"

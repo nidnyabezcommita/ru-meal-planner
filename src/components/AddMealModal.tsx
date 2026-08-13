@@ -788,25 +788,25 @@ export default function AddMealModal({
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                       <NutrientInput
-                        placeholder={t('addMealModal.placeholders.calories')}
+                        placeholder={t('addMealModal.fields.calories.placeholder')}
                         label={t('addMealModal.fields.calories.label')}
                         value={ing.calories}
                         onChange={(v) => handleIngredientChange(index, 'calories', v)}
                       />
                       <NutrientInput
-                        placeholder={t('addMealModal.placeholders.protein')}
+                        placeholder={t('addMealModal.fields.protein.placeholder')}
                         label={t('addMealModal.fields.protein.label')}
                         value={ing.protein}
                         onChange={(v) => handleIngredientChange(index, 'protein', v)}
                       />
                       <NutrientInput
-                        placeholder={t('addMealModal.placeholders.fat')}
+                        placeholder={t('addMealModal.fields.fat.placeholder')}
                         label={t('addMealModal.fields.fat.label')}
                         value={ing.fat}
                         onChange={(v) => handleIngredientChange(index, 'fat', v)}
                       />
                       <NutrientInput
-                        placeholder={t('addMealModal.placeholders.carbs')}
+                        placeholder={t('addMealModal.fields.carbs.placeholder')}
                         label={t('addMealModal.fields.carbs.label')}
                         value={ing.carbs}
                         onChange={(v) => handleIngredientChange(index, 'carbs', v)}

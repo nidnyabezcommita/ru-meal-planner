@@ -235,4 +235,99 @@ export interface TranslationTypes {
         all: string,
     }
   }
+  grocery: {
+    title: string,
+    subtitle: string,
+    banner: {
+        title: string,
+        subtitle: string,
+        link: string
+    },
+    title2: string,
+    empty: {
+        title: string,
+        subtitle: string
+    },
+    buttons: {
+        all: string,
+        sort: string,
+        merge: string,
+        group: string,
+        export: string
+    },
+    mergePopup: {
+        title: string,
+        empty: string,
+        fields: {
+            addItem: {
+                title: string,
+                placeholder: string"
+            },
+            mergeInto: {
+                title: string,
+                placeholder: string"
+            }
+        },
+        noMatches: string,
+        buttons: {
+            close: string,
+            apply: string,
+            merging: string,
+        }
+    },
+    smartGroupPopup: {
+        AItext: string,
+        langText: string,
+        fields: {
+            AiProvider: {
+                title: string,
+            },
+            model: {
+                title: string,
+            }
+        },
+        buttons: {
+            close: string,
+            run: string,
+        }
+    }
+  },
+  pantry: {
+    title: string,
+    subtitle: string,
+    banner: {
+        link: string
+    },
+    title2: string,
+    subtitle2: string,
+    empty: {
+        title: string,
+        subtitle: string
+    },
+    items: {
+        title: string,
+        remove: string
+    },
+    form: {
+        title: string,
+        subtitle: string,
+        fields: {
+            name: {
+                title: string 
+                placeholder: string
+            },
+            quantity: {
+                title: string
+            },
+            unit: {
+                title: string
+            }
+        },
+        button: string
+    },
+    tip: {
+        title: string,
+        text: string
+    }
+  }
 }
