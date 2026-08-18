@@ -363,5 +363,26 @@ export interface TranslationTypes {
         highProtein: string,
         mediterranean: string,
     }
+  },
+  mealDetailsModal: {
+    noImageText: string,
+    ingredients: string,
+    servings: string,
+    base: string,
+    edit: string,
+    viewOriginal: string,
+    ingredientsList: {
+        title: string,
+    },
+    instructions: {
+        title: string,
+        empty: {
+            title: string,
+            subtitle: string,
+        },
+        step: string,
+        next: string,
+        prev: string
+    }
   }
 }

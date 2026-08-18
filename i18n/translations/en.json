@@ -364,5 +364,26 @@
         "highProtein": "High Protein",
         "mediterranean": "Mediterranean"
     }
+  },
+  "mealDetailsModal": {
+    "noImageText": "No image available",
+    "ingredients": "ingredients",
+    "servings": "servings",
+    "base": "base",
+    "edit": "Edit Meal",
+    "viewOriginal": "View Original Recipe",
+    "ingredientsList": {
+        "title": "Ingredients"
+    },
+    "instructions": {
+        "title": "Instructions",
+        "empty": {
+            "title": "No instructions available for this meal.",
+            "subtitle": "Edit the meal to add step-by-step directions."
+        },
+        "step": "Step {{number}} of {{count}}",
+        "next": "Next",
+        "prev": "Previous"
+    }
   }
 }
