@@ -329,5 +329,39 @@ export interface TranslationTypes {
         title: string,
         text: string
     }
+  },
+  chatbot: {
+    title: string,
+    AItext: string,
+    message: string,
+    fields: {
+        q: {
+            placeholder: string,
+        }
+    },
+    thinking: string,
+  },
+  generatePlanModal: {
+    title: string,
+    subtitle: string 
+    text: string,
+    AItext: string,
+    langText: string,
+    dietary: string,
+    buttons: {
+        cancel: string,
+        loading: string,
+        generate: string"
+    },
+    diets: {
+        any: string,
+        vegan: string,
+        paleo: string,
+        lowCarb: string,
+        vegetarian: string,
+        keto: string,
+        highProtein: string,
+        mediterranean: string,
+    }
   }
 }

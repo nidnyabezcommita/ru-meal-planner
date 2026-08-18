@@ -330,5 +330,39 @@
         "title": "Quick Inventory Tip",
         "text": "Keeping your pantry updated helps ARPA suggest better recipes based on what you already have, reducing food waste and grocery spend."
     }
+  },
+  "chatbot": {
+    "title": "Bebü Bot",
+    "AItext": "AI provider from Preferences · {{provider}}",
+    "message": "Hello Bebü! I'm your meal planning assistant. Ask me about recipes, ingredients, or your weekly plan.",
+    "fields": {
+        "q": {
+            "placeholder": "Ask about recipes, ingredients..."
+        }
+    },
+    "thinking": "Thinking…"
+  },
+  "generatePlanModal": {
+    "title": "Generate Weekly Plan",
+    "subtitle": "Powered by Bebü Bot AI", 
+    "text": "Let AI craft a complete 7-day meal plan starting from",
+    "AItext": "Using saved AI provider from Preferences.",
+    "langText": "Using saved response language from Preferences.",
+    "dietary": "Dietary Preference",
+    "buttons": {
+        "cancel": "Cancel",
+        "loading": "Generating...",
+        "generate": "Generate Plan"
+    },
+    "diets": {
+        "any": "Any / Balanced",
+        "vegan": "Vegan",
+        "paleo": "Paleo",
+        "lowCarb": "Low Carb",
+        "vegetarian": "Vegetarian",
+        "keto": "Keto",
+        "highProtein": "High Protein",
+        "mediterranean": "Mediterranean"
+    }
   }
 }

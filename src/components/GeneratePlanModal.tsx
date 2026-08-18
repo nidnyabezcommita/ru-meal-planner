@@ -16,6 +16,8 @@ import {
   structuredAiLanguagePayload,
 } from '../lib/ai-settings';
 import { aiJobModelLabel, useAiJobQueue } from '../context/AiJobQueueContext';
+import { useTranslation } from 'react-i18next';
+import '@/i18n/i18n';
 
 interface GeneratePlanModalProps {
   isOpen: boolean;
@@ -24,23 +26,25 @@ interface GeneratePlanModalProps {
   startDate: Date;
 }
 
-const DIET_OPTIONS = [
-  'Any / Balanced',
-  'Vegetarian',
-  'Vegan',
-  'Keto',
-  'Paleo',
-  'High Protein',
-  'Low Carb',
-  'Mediterranean',
-];
-
 export default function GeneratePlanModal({
   isOpen,
   onClose,
   onSave,
   startDate,
 }: GeneratePlanModalProps) {
+  const { t } = useTranslation();
+
+  const DIET_OPTIONS = [
+    t("generatePlanModal.diets.any"),
+    t("generatePlanModal.diets.vegetarian"),
+    t("generatePlanModal.diets.vegan"),
+    t("generatePlanModal.diets.keto"),
+    t("generatePlanModal.diets.paleo"),
+    t("generatePlanModal.diets.highProtein"),
+    t("generatePlanModal.diets.lowCarb"),
+    t("generatePlanModal.diets.mediterranean"),
+  ];
+
   const { runWithAiJob } = useAiJobQueue();
   const [diet, setDiet] = useState(DIET_OPTIONS[0]);
   const [loading, setLoading] = useState(false);
@@ -152,10 +156,10 @@ export default function GeneratePlanModal({
             </div>
             <div>
               <h2 className="text-xl font-display font-extrabold text-primary-container dark:text-primary-fixed-dim tracking-tight">
-                Generate Weekly Plan
+                {t("generatePlanModal.title")}
               </h2>
               <p className="text-xs text-on-surface-variant mt-0.5">
-                Powered by Bebü Bot AI
+                {t("generatePlanModal.subtitle")}
               </p>
             </div>
           </div>
@@ -169,7 +173,7 @@ export default function GeneratePlanModal({
 
         <div className="px-6 pb-2 space-y-5">
           <p className="text-sm text-on-surface-variant leading-relaxed">
-            Let AI craft a complete 7-day meal plan starting from{' '}
+            {t("generatePlanModal.text") + ' '}
             <strong className="text-on-surface font-display font-bold">
               {format(startDate, 'MMM d, yyyy')}
             </strong>
@@ -187,7 +191,7 @@ export default function GeneratePlanModal({
             </div>
           ) : (
             <p className="text-xs text-on-surface-variant">
-              Using saved AI provider from Preferences.
+              {t("generatePlanModal.AItext")}
             </p>
           )}
 
@@ -195,13 +199,13 @@ export default function GeneratePlanModal({
             <ResponseLanguageSelector value={responseLanguage} onChange={handleResponseLanguageChange} />
           ) : (
             <p className="text-xs text-on-surface-variant">
-              Using saved response language from Preferences.
+              {t("generatePlanModal.langText")}
             </p>
           )}
 
           <div>
             <label className="block text-[11px] font-display font-bold uppercase tracking-widest text-outline mb-2">
-              Dietary Preference
+              {t("generatePlanModal.dietary")}
             </label>
             <div className="grid grid-cols-2 gap-2">
               {DIET_OPTIONS.map((option) => (
@@ -232,7 +236,7 @@ export default function GeneratePlanModal({
             onClick={onClose}
             className="px-5 py-2.5 text-on-surface-variant font-display font-semibold text-sm rounded-full hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors"
           >
-            Cancel
+            {t('generatePlanModal.buttons.cancel')}
           </button>
           <button
             onClick={handleGenerate}
@@ -242,12 +246,12 @@ export default function GeneratePlanModal({
             {loading ? (
               <>
                 <Loader2 className="w-4 h-4 animate-spin" />
-                Generating...
+                {t('generatePlanModal.buttons.loading')}
               </>
             ) : (
               <>
                 <Sparkles className="w-4 h-4" />
-                Generate Plan
+                {t('generatePlanModal.buttons.generate')}
               </>
             )}
           </button>
